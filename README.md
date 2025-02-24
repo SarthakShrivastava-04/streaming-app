@@ -4,6 +4,11 @@ A real-time streaming application that allows you to stream media by simply past
 
 ---
 
+## Tech Stack
+- MediaRecorder API,  Node.js, Express, Socket.IO, FFmpeg, RTMP, Docker.
+
+---
+
 ## Features
 - **Easy RTMP Connection**: Just paste your RTMP server key and start streaming.
 - **Real-Time Media Capture**: Captures media (audio/video) directly from the client side.
@@ -14,14 +19,9 @@ A real-time streaming application that allows you to stream media by simply past
 
 ## Architecture
 1. **Client Side**:
-   - Captures media using the browser's `MediaRecorder` API.
+   - Captures media using the browser's MediaRecorder API.
    - Converts media to binary chunks and sends them to the backend via **Socket.IO**.
 
 2. **Backend**:
    - Receives binary data using **Socket.IO**.
    - Uses **FFmpeg** to process and stream the media to the RTMP server.
-
----
-
-## Tech Stack
-- `MediaRecorder` API,  Node.js, Express, Socket.IO, FFmpeg, RTMP, Docker
